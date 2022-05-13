@@ -1,0 +1,23 @@
+<%- include('./layout/header', {title: "Project"}) %>
+<div class="body container">
+  <%- include('./layout/navbar') %>
+  <div class="project">
+    <div class="row text-center"><h1>My Project</h1></div>
+    <div class="row">
+      <% let i=1 %> <% for(let projek of projeks) { %>
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-header"><span>Project <%=i %></span></div>
+          <div class="card-body">
+            <h5 class="card-title"><%= projek.nama %></h5>
+            <p class="card-text"><%= projek.deskripsi %></p>
+            <a href="<%= projek.link %>" class="btn btn-primary">Visit</a>
+          </div>
+        </div>
+      </div>
+      <% i+=1 %> <% } %>
+    </div>
+  </div>
+  <%- include('./layout/footsection') %>
+</div>
+<%- include('./layout/footer') %>

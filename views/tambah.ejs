@@ -1,0 +1,23 @@
+<%-include('./layout/header', { title: "tambah project" }) -%> <%- include('./layout/navbar') -%>
+<div class="body container">
+  <div class="tambah">
+    <form action="/tambah" method="post">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Nama Projek</span>
+        <input name="nama" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required />
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Deskripsi</span>
+        <input name="deskripsi" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required />
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Link</span>
+        <input name="link" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required />
+      </div>
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+  </div>
+  <br />
+  <%- include('./layout/footsection') -%>
+</div>
+<%- include('./layout/footer') -%>
